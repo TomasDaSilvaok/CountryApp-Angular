@@ -5,14 +5,17 @@ import { ByCapitalPageComponent } from './pages/by-capital-page/by-capital-page.
 import { ByRegionPageComponent } from './pages/by-region-page/by-region-page.component';
 import { ByCountryPageComponent } from './pages/by-country-page/by-country-page.component';
 import { CountryPageComponent } from './pages/country-page/country-page.component';
+import { SharedModule } from '../shared/shared.module';
+import { ContryTableComponent } from './components/contry-table/contry-table.component';
 
 @NgModule({
   declarations: [
     ByCapitalPageComponent,
     ByRegionPageComponent,
     ByCountryPageComponent,
-    CountryPageComponent
+    CountryPageComponent,
+    ContryTableComponent
   ],
-  imports: [CommonModule, CountriesRoutingModule],
+  imports: [CommonModule, CountriesRoutingModule, SharedModule],
 })
 export class CountriesModule {}

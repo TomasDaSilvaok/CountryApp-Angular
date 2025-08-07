@@ -5,10 +5,14 @@ import { AboutPageComponent } from './shared/pages/about/about.component';
 import { ContactPageComponent } from './shared/pages/contact-page/contact-page.component';
 
 const routes: Routes = [
-  { path: '', component: HomePageComponent },
   { path: 'about', component: AboutPageComponent },
   { path: 'contact', component: ContactPageComponent },
-  { path: '**', redirectTo: '' },
+  {
+    path: 'countries',
+    loadChildren: () =>
+      import('./countries/countries.module').then((m) => m.CountriesModule),
+  },
+  { path: '**', redirectTo: 'countries' },
 ];
 
 @NgModule({
