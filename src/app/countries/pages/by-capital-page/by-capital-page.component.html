@@ -1,5 +1,6 @@
 <h2>By capital</h2>
 <hr />
+<shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
 <shared-search-box
   (searchValue)="searchByCapital($event)"
   placeholder="Buenos aires, Paris, Rome..."
