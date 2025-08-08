@@ -2,7 +2,7 @@
 <hr />
 <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
 <shared-search-box
-  (searchValue)="searchByCapital($event)"
+  (onDebounce)="searchByCapital($event)"
   placeholder="Buenos aires, Paris, Rome..."
 ></shared-search-box>
 

@@ -1,13 +1,13 @@
 <h2>By Region</h2>
 <hr />
 <shared-search-box
-(searchValue)="searchByRegion($event)"
-placeholder="Europe, America, Asia..."
+  (onDebounce)="searchByRegion($event)"
+  placeholder="Europe, America, Asia..."
 ></shared-search-box>
 
 <div class="row">
   <div class="col">
-    <hr>
+    <hr />
     <countries-table [countries]="countries"></countries-table>
   </div>
 </div>

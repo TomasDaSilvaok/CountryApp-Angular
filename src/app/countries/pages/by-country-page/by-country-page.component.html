@@ -2,7 +2,7 @@
 <hr />
 <shared-search-box
   placeholder="Argentina, France, Italy..."
-  (searchValue)="searchByCountry($event)"
+  (onDebounce)="searchByCountry($event)"
 ></shared-search-box>
 
 <div class="row">
