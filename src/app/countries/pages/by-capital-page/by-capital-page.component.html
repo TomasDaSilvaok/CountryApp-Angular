@@ -3,6 +3,7 @@
 <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
 <shared-search-box
   (onDebounce)="searchByCapital($event)"
+  [initialValue]="initialValue"
   placeholder="Buenos aires, Paris, Rome..."
 ></shared-search-box>
 
